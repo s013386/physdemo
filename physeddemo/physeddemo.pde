@@ -18,7 +18,7 @@ void draw(){
   for( int i=0; i < balls.size(); i++){
     fill(255);
     ellipse(balls.get(i).landingpoint,balls.get(i).currentposition, 25,25);
-    if (balls.get(i).currentposition>475 && (balls.get(i).landingpoint>jugglex+50 || balls.get(i).landingpoint<jugglex-50)){
+    if (balls.get(i).currentposition>445 && (balls.get(i).landingpoint>jugglex+50 || balls.get(i).landingpoint<jugglex-50)){
     die();
     }
     balls.get(i).move();
@@ -34,7 +34,12 @@ void draw(){
   rect(jugglex, 450,50,10);
   if( movingLeft==true) jugglex-=10;
   if( movingRight==true) jugglex+=10;
-  
+  if (jugglex<-25){
+   jugglex=1625; 
+  }
+   if (jugglex>1625){
+   jugglex=-25; 
+  }
 }
 
 

@@ -15,7 +15,7 @@ class ball{
      addscore=true;
      speed = -speed;
    }
-   if(currentposition>485){
+   if(currentposition>450){
     speed = -speed; 
    }
     
